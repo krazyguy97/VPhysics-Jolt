@@ -1,3 +1,4 @@
+This fork mainly integrates AVX-512 extensions as well as some gcc flags and at some point, MSVC (Windows) flags for performance, and a separate AVX-512 build.
 ![VPhysics Jolt Logo](assets/cube_base_nobg.png "VPhysics Jolt")
 
 ## What is Volt? ⚡
