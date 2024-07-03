@@ -21,10 +21,10 @@ $Configuration
 
 		// Feature test stuff for the SSE 4.2 build
 		$PreprocessorDefinitions		"$BASE;JPH_USE_SSE4_1;JPH_USE_SSE4_2"			[$VOLT_SSE42]
-		$GCC_ExtraCompilerFlags			"$BASE -msse4.1 -msse4.2 -mmmx -mtune=znver3 -march=znver3"						[$VOLT_SSE42]
-		$EnableEnhancedInstructionSet	"Streaming SIMD Extensions 2 (/arch:AVX2 /O2 /fp:fast)"		[$WIN32 && $VOLT_SSE42]		// Source 2013 doesn't enable this by default
+		$GCC_ExtraCompilerFlags			"$BASE -msse4.1 -msse4.2"						[$VOLT_SSE42]
+		$EnableEnhancedInstructionSet	"Streaming SIMD Extensions 2 (/arch:SSE42 /O2 /fp:fast)"		[$WIN32 && $VOLT_SSE42]		// Source 2013 doesn't enable this by default
 		
 		// Feature test stuff for the SSE 2 build
-		$EnableEnhancedInstructionSet	"Streaming SIMD Extensions 2 (/arch:SSE2)"		[$WIN32 && $VOLT_SSE2]		// Source 2013 doesn't enable this by default
+		$EnableEnhancedInstructionSet	"Streaming SIMD Extensions 2 (/arch:SSE2 /O2 /fp:fast)"		[$WIN32 && $VOLT_SSE2]		// Source 2013 doesn't enable this by default
 	}
 }
