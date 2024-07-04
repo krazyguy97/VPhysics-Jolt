@@ -1,7 +1,7 @@
 kind: pipeline
 type: docker
 name: Build and Push Windows Binaries
-
+on: [push, pull_request, workflow_dispatch]
 # This build script is used internally
 # to provide GMod builds as those cannot be provided
 # using any publicly available SDKs.
